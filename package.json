@@ -19,7 +19,7 @@
   },
   "scripts": {
     "api": "json-server --watch db.json --port 3002",
-    "start": "set PORT=3001 && react-scripts start",
+    "start": "PORT=3001 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
