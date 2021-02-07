@@ -1,3 +1,12 @@
+## Candidate notes
+- I am not used to use a state management tool (anymore) so I just used useState/hooks and state colocation or "lifted up state".
+- Same for CSS-in-JS. I only used linaria in the past 3 weeks and I think it would have taken me more time to set it up than just add some scss
+- I only made one (start of) integration test for the App.
+- I had to change some packages and scripts to make them work on my machine but I'll revert the script before committing. ("start": "set PORT=3001 && react-scripts start",) becuase it was complaining on Windows.
+- I am used to throw errors in try/catch, but I didn't have the time to add an Error Boundry
+- I could have also used AbortController to cancel concurrent api calls, but it's a nice to have and definitely not in a few hours test.
+
+
 ## Cleo Frontend Interview - Bills
 ### Get Started
 1. Fork or clone this repo (a simple [`create-react-app`](https://github.com/facebook/create-react-app) extended with [`json-server`](https://github.com/typicode/json-server) and some Cleo-specific goodies)
