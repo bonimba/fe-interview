@@ -17,7 +17,7 @@ export function Tabs({ className, tabs }: PropsWithChildren<TabsProps>) {
   return (
     <div className={className}>
       <TabList tabs={tabList} selectedTab={selectedTab} onTabClick={setSelectedTab} className="tabs__tablist" />
-      <TabPanel>{content}</TabPanel>
+      <TabPanel className="tabs__panel">{content}</TabPanel>
     </div>
   );
 }
@@ -53,7 +53,7 @@ interface TabProps {
 
 function Tab({ label, active, title, onClick }: TabProps) {
   return (
-    <li title={title} className={`tab ${active ? 'active-tab' : undefined}`}>
+    <li title={title} className={`tab ${active ? 'active-tab' : ''}`}>
       <button type="button" onClick={onClick}>{label}</button>
     </li>
   );

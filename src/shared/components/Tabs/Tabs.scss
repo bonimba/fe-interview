@@ -1,0 +1,44 @@
+$spacing: 8px;
+
+.tabs__tablist {
+  all: unset;
+  list-style: none;
+  display: flex;
+
+  .tab {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    line-height: 20px;
+    padding: $spacing ($spacing * 2);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 3px solid black;
+
+    &:focus {
+      box-shadow: 0 0 2px 1px #4eadfa;
+    }
+
+    > button {
+      all: unset;
+    }
+
+    &.active-tab {
+      background-color: #4eadfa;
+    }
+  }
+}
+
+.tabs__panel {
+  border: 1px solid black;
+
+  ul {
+    all: unset;
+    list-style: none;
+
+    li {
+      padding-left: 8px;
+    }
+  }
+}

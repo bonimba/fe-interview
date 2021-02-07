@@ -66,32 +66,36 @@ function MerchantRow({ merchant, onMerchantChange }: MerchantRowProps) {
       <button className="merchant-row-container" type="button" onClick={() => setShowTransactions(showTransactions => !showTransactions)}>
         {iconUrl !== null && <img src={iconUrl} alt={`${name}'s logo`} height='25'/>}
         <strong>{name}</strong>
-        <div>{transactions.length}</div>
+        <div>Available transactions: {transactions.length}</div>
         {showTransactions && (
-          <div>
-            <table>
-              <thead>
-                <tr>
-                  <th>Id</th>
-                  <th>Date</th>
-                  <th>Amount</th>
-                </tr>
-              </thead>
-              <tbody>
-                {transactions.map(({ id, amount, date }) => (
-                  <tr key={id}>
-                    <td>{id}</td>
-                    <td><time dateTime={date}>{date}</time></td>
-                    <td>£{amount}</td>
-                  </tr>)
-                  )
-                }
-              </tbody>
-            </table>
-          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Date</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              {transactions.map(({ id, amount, date }) => (
+                <tr key={id}>
+                  <td>{id}</td>
+                  <td><time dateTime={date}>{date}</time></td>
+                  <td className="number-value">£{amount}</td>
+                </tr>)
+                )
+              }
+            </tbody>
+          </table>
         )}
       </button>
-      <button className="merchant-row-action-button" type="button" onClick={() => setChangeBillStatus(true)}>{isBill ? 'Remove bill' : 'Add as bill'}</button>
+      <button
+        className={`merchant-row-action-button ${isBill ? 'remove' : 'add'}`}
+        type="button"
+        onClick={() => setChangeBillStatus(true)}
+      >
+        {isBill ? 'Remove bill' : 'Add as bill'}
+      </button>
   </>
   );
 }
