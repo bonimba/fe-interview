@@ -39,7 +39,7 @@ $spacing: 8px;
     list-style: none;
 
     li {
-      padding-left: 8px;
+      padding-left: $spacing;
     }
   }
 }
