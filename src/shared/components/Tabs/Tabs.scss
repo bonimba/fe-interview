@@ -14,7 +14,7 @@ $spacing: 8px;
     padding: $spacing ($spacing * 2);
     border-left: 1px solid black;
     border-right: 1px solid black;
-    border-top: 3px solid black;
+    border-top: 1px solid black;
 
     &:focus {
       box-shadow: 0 0 2px 1px #4eadfa;
@@ -26,6 +26,7 @@ $spacing: 8px;
 
     &.active-tab {
       background-color: #4eadfa;
+      border-bottom: 3px solid black;
     }
   }
 }
